@@ -1,0 +1,25 @@
+/*
+* 
+* mobile.scss
+* All Mobile Styling for the complete Website
+*
+*/
+//Widescreens
+@include mediaXl {}
+
+//Desktops & Laptops
+@include mediaLg {}
+
+//Tablets & Small Laptops
+@include mediaMd {
+  #nav-top {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: block;
+  }
+}
+
+//SmartPhones
+@include mediaSm {}

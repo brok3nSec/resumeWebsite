@@ -1,7 +1,17 @@
+/*
+* 
+* app.scss
+*
+*/
+/*
+* Import of scss includes
+* Sequences is of importence :
+*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700,900");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,156 +55,293 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.home .logo {
+/*
+* media.scss
+*
+* Media Query Mixins
+*
+*/
+/*
+* 
+* mixins.scss
+* All Logic code for the complete Website
+* Variables, Functons, Mixins etc
+*
+*/
+/*
+* EaseOut Transition
+*/
+/*
+* Set Text Color
+*/
+/*
+* 
+* config.scss
+* All design properties for the complete Website
+* Colors and configuration
+*/
+/*
+* FLat Ui Colors
+*/
+/*
+* Primary colors
+*/
+/*
+* shades of gray
+*/
+/*
+* system colors
+*/
+/*
+* main colors
+*/
+/*
+* navigation
+*/
+/*
+* 
+* global.scss
+* Global Styling for the complete Website
+*
+*/
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 18px;
+  background: #555555;
+  font-family: 'Poppins', sans-serif;
+  height: 100%; }
+
+main {
+  margin-top: 6rem;
+  padding: 0 2rem;
+  overflow: hidden; }
+  main section {
+    margin: 2rem 0; }
+
+footer {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  height: 10vh;
+  background: #333333;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "lg sm nm";
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center; }
+  footer .logo {
+    text-align: center;
+    grid-area: lg;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2ecc71; }
+  footer .social {
+    grid-area: sm;
+    text-align: center; }
+    footer .social a {
+      padding: 0.25rem;
+      text-decoration: none;
+      color: #fff; }
+      footer .social a:hover {
+        text-decoration: none;
+        color: #2ecc71; }
+  footer .address {
+    grid-area: nm;
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center; }
+    footer .address span {
+      color: #2ecc71; }
+
+/*
+* 
+* nav.scss
+* Navigation Styling for the complete Website
+*
+*/
+#nav-mobile {
+  display: none;
+  position: fixed;
+  top: 0; }
+  #nav-mobile .menu-btn-open {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
+    #nav-mobile .menu-btn-open .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #3498db;
+      transition: all 0.5s ease-out; }
+  #nav-mobile .menu-btn-close {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    transform: rotate(180deg); }
+    #nav-mobile .menu-btn-close .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #3498db;
+      transition: all 0.5s ease-out; }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(2) {
+        opacity: 0; }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); }
+  #nav-mobile #mnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9; }
+    #nav-mobile #mnav .mnav-menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #494949;
+      transition: all 0.5s ease-out; }
+      #nav-mobile #mnav .mnav-menu .mnav-item {
+        transition: all 0.5s ease-out; }
+        #nav-mobile #mnav .mnav-menu .mnav-item.current > a {
+          color: #2ecc71; }
+        #nav-mobile #mnav .mnav-menu .mnav-item .mnav-link {
+          display: inline-block;
+          position: relative;
+          font-size: 30px;
+          text-transform: uppercase;
+          padding: 1rem 0;
+          font-weight: 300;
+          color: #fff;
+          text-decoration: none;
+          transition: all 0.5s ease-out; }
+          #nav-mobile #mnav .mnav-menu .mnav-item .mnav-link:hover {
+            color: #2ecc71; }
+
+#nav-top {
+  position: fixed;
+  padding-top: 1rem;
+  top: 0;
+  width: 100%;
+  height: 15vh;
+  opacity: 0.9;
+  background: #494949;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "nh nm nm nm";
+  grid-template-columns: repeat(4, 1fr); }
+  #nav-top .nav-heading {
+    grid-area: nh;
+    padding: 0;
+    margin: 0 25px;
+    width: 20%; }
+    #nav-top .nav-heading h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #2ecc71; }
+  #nav-top .nav-menu {
+    grid-area: nm;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 80%; }
+    #nav-top .nav-menu .nav-item {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      float: right;
+      width: 50%; }
+      #nav-top .nav-menu .nav-item.current > a {
+        color: #2ecc71; }
+      #nav-top .nav-menu .nav-item .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 0.75rem 0.5rem;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.5s ease-out; }
+        #nav-top .nav-menu .nav-item .nav-link:hover {
+          color: #2ecc71; }
+
+/*
+* 
+* home.scss
+* Styling for the home page
+*
+*/
+#home .logo {
   background: white;
   height: 100px;
   width: 200px; }
 
-.home .info-section {
-  padding: 54px;
-  width: 35%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0; }
-  .home .info-section .info-box {
-    position: absolute;
-    bottom: 60px; }
-    .home .info-section .info-box h4 {
-      font-size: 1.2rem;
-      color: #000000;
-      margin: 0.7rem 0; }
-    .home .info-section .info-box p {
-      font-size: 0.9rem;
-      font-weight: 300;
-      margin: 0.2rem 0 1.6rem; }
-  .home .info-section .icon-section a {
-    color: #f9fffe;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0 10px; }
-    .home .info-section .icon-section a:first-child {
-      padding: 0 10px 0 0; }
+#home #about {
+  background-image: url("img/bg-about.png"); }
 
-.home .content-area {
-  margin-left: 35%;
-  width: 65%;
-  background: white;
-  height: 100%; }
-  .home .content-area .img-container {
-    display: inline-block;
-    width: 30%;
-    position: relative;
-    height: 100%; }
-    .home .content-area .img-container .user-img {
-      top: 80px;
-      position: absolute;
-      left: -200px;
-      width: 400px;
-      height: calc(100% - 112px);
-      background: url("../img/me.jpg") no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
-  .home .content-area .profile-section {
-    vertical-align: top;
-    display: inline-block;
-    padding: 20% 0 0;
-    max-width: 555px; }
-    .home .content-area .profile-section .profile h1 {
-      font-size: 2.3rem;
-      font-weight: 500;
-      line-height: 1.2;
-      margin: 0 0 30px; }
-      .home .content-area .profile-section .profile h1 span {
-        color: #465e84; }
-    .home .content-area .profile-section .profile h5 {
-      font-size: 1.3rem;
-      margin: 0 0 1rem; }
-    .home .content-area .profile-section .profile p {
-      font-weight: 300;
-      line-height: 1.4;
-      margin: 0 0 2rem; }
+#home .social a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0 10px; }
+  #home .social a:first-child {
+    padding: 0 10px 0 0; }
 
-* {
-  box-sizing: border-box; }
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  #portfolio img {
+    width: 100%;
+    border: 3px solid #fff; }
+    #portfolio img:hover {
+      opacity: 0.5;
+      border-color: #2ecc71;
+      transition: all 0.5s ease-out; }
+  #portfolio .btn-dark,
+  #portfolio .btn-light {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem; }
+  #portfolio .btn:hover,
+  #portfolio .btn-dark:hover,
+  #portfolio .btn-light:hover {
+    background: #2ecc71;
+    color: #000; }
+  #portfolio .btn-dark {
+    background: #222222;
+    color: #fff; }
+  #portfolio .btn-light {
+    background: #333333;
+    color: #fff; }
 
-html, body {
-  font-size: 18px;
-  background: #465e84;
-  font-family: 'Poppins', sans-serif;
-  height: 100%; }
-
-.menu-icon {
-  position: fixed;
-  right: 56px;
-  top: 56px;
-  z-index: 11px;
-  padding: 20px; }
-  .menu-icon .fa {
-    font-size: 2rem;
-    color: #000000; }
-
-.primary-btn {
-  background: #000000;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  border-radius: 20px;
-  text-align: center;
-  color: #f9fffe;
-  font-weight: 100;
-  padding: 15px 30px;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-right: 15px; }
-
-.ghost-btn {
-  border: 4px solid #465e84;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  border-radius: 20px;
-  text-align: center;
-  color: #465e84;
-  font-weight: 100;
-  padding: 12px 27px;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 4px; }
-
-#menu {
-  background: #465e84;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  position: translate3d(-100%, 0, 0);
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition: all 0.5s ease-in-out; }
-  #menu nav {
-    width: 400px;
-    text-align: center; }
-    #menu nav a {
-      font-size: 2.3rem;
-      padding: 1rem;
-      display: block;
-      text-decoration: none;
-      color: black; }
-      #menu nav a:hover {
-        color: #f9fffe; }
-
-.menu-active .menu-icon .fa {
-  color: white; }
-
-.menu-active #menu {
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  transform: translate3d(0, 0, 0); }
+/*
+* 
+* mobile.scss
+* All Mobile Styling for the complete Website
+*
+*/
+@media screen and (max-width: 768px) {
+  #nav-top {
+    display: none; }
+  #nav-mobile {
+    display: block; } }

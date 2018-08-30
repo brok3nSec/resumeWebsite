@@ -1,0 +1,107 @@
+/*
+* 
+* global.scss
+* Global Styling for the complete Website
+*
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 18px;
+  background: $gray;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+}
+
+main {
+  margin-top: 6rem;
+  padding: 0 2rem;
+  overflow: hidden;
+
+  section {
+    margin: 2rem 0;
+  }
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  height: 10vh;
+  background: $footer-color;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "lg sm nm";
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    text-align: center;
+    grid-area: lg;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $tetiary-color;
+    // margin: 1rem;
+  }
+
+  .social {
+    grid-area: sm;
+    text-align: center;
+
+    // margin: 1rem;
+    a {
+      padding: 0.25rem;
+      text-decoration: none;
+      color: set-text-color($primary-color);
+
+      &:hover {
+        text-decoration: none;
+        color: $tetiary-color;
+      }
+    }
+  }
+
+  .address {
+    grid-area: nm;
+    color: set-text-color($primary-color);
+    font-size: 0.75rem;
+    text-align: center;
+
+    span {
+      color: $tetiary-color;
+    }
+  }
+}
+
+// .primary-btn {
+//   background: $black;
+//   -webkit-border-radius: 20px;
+//   -moz-border-radius: 20px;
+//   border-radius: 20px;
+//   border-radius: 20px;
+//   text-align: center;
+//   color: $white;
+//   font-weight: 100;
+//   padding: 15px 30px;
+//   display: inline-block;
+//   text-transform: uppercase;
+//   letter-spacing: 4px;
+//   margin-right: 15px;
+// }
+// .ghost-btn {
+//   border: 4px solid $gray;
+//   -webkit-border-radius: 20px;
+//   -moz-border-radius: 20px;
+//   border-radius: 20px;
+//   border-radius: 20px;
+//   text-align: center;
+//   color: $gray;
+//   font-weight: 100;
+//   padding: 12px 27px;
+//   display: inline-block;
+//   text-transform: uppercase;
+//   letter-spacing: 4px;
+// }
