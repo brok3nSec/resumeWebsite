@@ -1,0 +1,219 @@
+/*
+* 
+* nav.scss
+* Navigation Styling for the complete Website
+*
+*/
+//Menu Button
+#nav-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+
+  .menu-btn-open {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: $nav-btn-color;
+      @include easeOut;
+    }
+  }
+
+  .menu-btn-close {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 30px;
+    cursor: pointer;
+    @include easeOut;
+    transform: rotate(180deg);
+
+    .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: $nav-btn-color;
+      @include easeOut;
+
+      //Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      //Line 2 - Hidden
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      //Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+    top: 32px;
+  }
+
+  #mnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+
+    .mnav-menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: darken($primary-color, 5);
+      @include easeOut;
+
+      .mnav-item {
+        @include easeOut;
+
+        &.current>a {
+          color: $tetiary-color;
+        }
+
+        .mnav-link {
+          display: inline-block;
+          position: relative;
+          text-transform: uppercase;
+          padding: 1rem 0;
+          font-weight: 300;
+          color: set-text-color($primary-color);
+          text-decoration: none;
+          @include easeOut;
+
+          &:hover {
+            color: $tetiary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+#nav-top {
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  background: darken($primary-color, 5);
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "nh nh nm nm nm";
+  grid-template-columns: repeat(5, 1fr);
+
+  .nav-heading {
+    grid-area: nh;
+    padding: 0;
+    margin: 0px;
+    width: 20%;
+    font-size: 3rem;
+  }
+
+  .nav-menu {
+    grid-area: nm;
+    display: flex;
+    padding: 0;
+    margin: 0 25px;
+    width: 80%;
+    list-style: none;
+
+    .nav-item {
+      float: right;
+      padding: 0;
+      margin: 0;
+
+      &.active {
+        .nav-link {
+          color: $tetiary-color;
+        }
+      }
+
+      .nav-link {
+        text-transform: uppercase;
+        padding: 0.75rem 0.5rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: set-text-color($primary-color);
+
+        //@include easeOut;
+        &:hover,
+        &:active {
+          color: $tetiary-color;
+        }
+      }
+    }
+  }
+}
+
+.current {
+  color: $tetiary-color;
+}
+
+// #menu {
+//   background-color: $grey;
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   bottom: 0;
+//   position: translate3d(-100%, 0, 0);
+//   z-index: 10;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   opacity: 1;
+//   transition: all 0.5s ease-in-out;
+//   nav {
+//     width: 400px;
+//     text-align: center;
+//     a {
+//       font-size: 2.3rem;
+//       padding: 1rem;
+//       display: block;
+//       text-decoration: none;
+//       color: black;
+//       &:hover {
+//         color: $white;
+//       }
+//     }
+//   }
+// }
+// .menu-active {
+//   .menu-icon {
+//     .fa {
+//       color: white;
+//     }
+//   }
+//   #menu {
+//     width: 100%;
+//     top: 0;
+//     bottom: 0;
+//     transform: translate3d(0, 0, 0, );
+//   }
+// }

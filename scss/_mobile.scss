@@ -1,0 +1,40 @@
+/*
+* 
+* mobile.scss
+* All Mobile Styling for the complete Website
+*
+*/
+//Widescreens
+@include mediaXl {}
+
+//Desktops & Laptops
+@include mediaLg {}
+
+//Tablets & Small Laptops
+@include mediaMd {
+  #nav-top {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: block;
+  }
+
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact {
+    .lowerRow {
+      grid-template-areas: "lg""sm""nm";
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+//SmartPhones
+@include mediaSm {
+  #portfolio {
+    grid-template-columns: 1fr;
+  }
+}

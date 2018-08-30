@@ -1,0 +1,78 @@
+/*
+* 
+* global.scss
+* Global Styling for the complete Website
+*
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: fluid-type($min_width, $max_width, $min_font, $max_font);
+  line-height: 1.5em;
+  background: $gray;
+  height: 100%;
+}
+
+main {
+  margin-top: 6rem;
+  padding: 0;
+  min-height: calc(100vh - 40px);
+  overflow: hidden;
+
+  section {
+    margin: 0;
+  }
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+  height: auto;
+  text-align: center;
+  color: set-text-color($primary-color);
+  background-color: $footer-color;
+}
+
+// Branding
+.brandName {
+  color: $brandName-color;
+  font-weight: 700;
+}
+
+// .primary-btn {
+//   background: $black;
+//   -webkit-border-radius: 20px;
+//   -moz-border-radius: 20px;
+//   border-radius: 20px;
+//   border-radius: 20px;
+//   text-align: center;
+//   color: $white;
+//   font-weight: 100;
+//   padding: 15px 30px;
+//   display: inline-block;
+//   text-transform: uppercase;
+//   letter-spacing: 4px;
+//   margin-right: 15px;
+// }
+// .ghost-btn {
+//   border: 4px solid $gray;
+//   -webkit-border-radius: 20px;
+//   -moz-border-radius: 20px;
+//   border-radius: 20px;
+//   border-radius: 20px;
+//   text-align: center;
+//   color: $gray;
+//   font-weight: 100;
+//   padding: 12px 27px;
+//   display: inline-block;
+//   text-transform: uppercase;
+//   letter-spacing: 4px;
+// }

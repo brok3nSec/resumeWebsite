@@ -1,0 +1,27 @@
+/*
+* 
+* app.scss
+*
+*/
+/*
+* Import of scss includes
+* Sequences is of importence :
+*/
+// -1 EricMeyersReset
+@import "reset";
+// -2 Import from google
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700,900');
+// -3 MediaQuerieMixins
+@import "media";
+// -4 Logic -> Variables, functions, Mixins
+@import "mixins";
+// -5 Design -> design property variables, configuration
+@import "config";
+// -6 Global
+@import "global";
+// -7 Navigation
+@import "nav";
+// -8 Pages
+@import "home";
+// -9 Mobile
+@import "mobile";

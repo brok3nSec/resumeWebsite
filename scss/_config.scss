@@ -1,0 +1,78 @@
+/*
+* 
+* config.scss
+* All design properties for the complete Website
+* Colors and configuration
+*/
+/*
+* FLat Ui Colors
+*/
+$turquoise: #1ABC9C;
+$green_sea: #16a085;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+$peter_river: #3498db;
+$belize_hole: #2980b9;
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+$wet_asphalt: #34495e;
+$midnight_blue: #2c3e50;
+$sun_flower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+/*
+* Primary colors
+*/
+$black: rgb(34, 34, 34);
+$white: rgb(255, 255, 255);
+$red: rgb(255, 0, 0);
+$blue: rgb(0, 0, 255);
+$green: rgb(0, 255, 0);
+/*
+* shades of gray
+*/
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+/*
+* system colors
+*/
+$brand-primary: $peter_river !default; // #3498DB
+$brand-success: $emerald !default;
+$brand-info: $turquoise !default;
+$brand-warning: $carrot !default;
+$brand-danger: $alizarin !default;
+/*
+* main colors
+*/
+$primary-color: $gray;
+$secondary-color: $white;
+$tetiary-color: $emerald;
+/*
+* navigation
+*/
+$nav-btn-color: $peter_river;
+$footer-color: $gray-dark;
+$btn-dark: $gray-darker;
+$btn-light:$gray-dark;
+/*
+* Branding
+*/
+$brandName-color: $tetiary-color;
+/*
+* Dimensions
+*/
+$min_width: 320px;
+$max_width: 100vw;
+$min_font: 16px;
+$max_font: 26px;

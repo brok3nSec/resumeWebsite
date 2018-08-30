@@ -1,0 +1,38 @@
+/*
+* media.scss
+*
+* Media Query Mixins
+*
+*/
+
+@mixin mediaSm {
+  //SmartPhones
+  //Screen-size 500px and less
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  //Tablets & Small Laptops
+  //Screen-size 768px and less
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  //Desktops & Laptops
+  //Screen-size between 769px and 1170px
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  //Widescreens
+  //Screen-size 1170px and over
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

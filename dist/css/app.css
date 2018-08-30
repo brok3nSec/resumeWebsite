@@ -1,0 +1,368 @@
+/*
+* 
+* app.scss
+*
+*/
+/*
+* Import of scss includes
+* Sequences is of importence :
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700,900");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+* media.scss
+*
+* Media Query Mixins
+*
+*/
+/*
+* 
+* mixins.scss
+* All Logic code for the complete Website
+* Variables, Functons, Mixins etc
+*
+*/
+/*
+* 
+* config.scss
+* All design properties for the complete Website
+* Colors and configuration
+*/
+/*
+* FLat Ui Colors
+*/
+/*
+* Primary colors
+*/
+/*
+* shades of gray
+*/
+/*
+* system colors
+*/
+/*
+* main colors
+*/
+/*
+* navigation
+*/
+/*
+* Branding
+*/
+/*
+* Dimensions
+*/
+/*
+* 
+* global.scss
+* Global Styling for the complete Website
+*
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: fluid-type(320px, 100vw, 16px, 26px);
+  line-height: 1.5em;
+  background: #555555;
+  height: 100%; }
+
+main {
+  margin-top: 6rem;
+  padding: 0;
+  min-height: calc(100vh - 40px);
+  overflow: hidden; }
+  main section {
+    margin: 0; }
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  background-color: #333333; }
+
+.brandName {
+  color: #2ecc71;
+  font-weight: 700; }
+
+/*
+* 
+* nav.scss
+* Navigation Styling for the complete Website
+*
+*/
+#nav-mobile {
+  display: none;
+  position: fixed;
+  top: 0; }
+  #nav-mobile .menu-btn-open {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
+    #nav-mobile .menu-btn-open .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #3498db;
+      transition: all 0.5s ease-out; }
+  #nav-mobile .menu-btn-close {
+    position: absolute;
+    z-index: 3;
+    left: 35px;
+    top: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    transform: rotate(180deg); }
+    #nav-mobile .menu-btn-close .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #3498db;
+      transition: all 0.5s ease-out; }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(2) {
+        opacity: 0; }
+      #nav-mobile .menu-btn-close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); }
+  #nav-mobile .logo {
+    font-size: 1.8rem;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+    top: 32px; }
+  #nav-mobile #mnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9; }
+    #nav-mobile #mnav .mnav-menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #494949;
+      transition: all 0.5s ease-out; }
+      #nav-mobile #mnav .mnav-menu .mnav-item {
+        transition: all 0.5s ease-out; }
+        #nav-mobile #mnav .mnav-menu .mnav-item.current > a {
+          color: #2ecc71; }
+        #nav-mobile #mnav .mnav-menu .mnav-item .mnav-link {
+          display: inline-block;
+          position: relative;
+          text-transform: uppercase;
+          padding: 1rem 0;
+          font-weight: 300;
+          color: #fff;
+          text-decoration: none;
+          transition: all 0.5s ease-out; }
+          #nav-mobile #mnav .mnav-menu .mnav-item .mnav-link:hover {
+            color: #2ecc71; }
+
+#nav-top {
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  background: #494949;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "nh nh nm nm nm";
+  grid-template-columns: repeat(5, 1fr); }
+  #nav-top .nav-heading {
+    grid-area: nh;
+    padding: 0;
+    margin: 0px;
+    width: 20%;
+    font-size: 3rem; }
+  #nav-top .nav-menu {
+    grid-area: nm;
+    display: flex;
+    padding: 0;
+    margin: 0 25px;
+    width: 80%;
+    list-style: none; }
+    #nav-top .nav-menu .nav-item {
+      float: right;
+      padding: 0;
+      margin: 0; }
+      #nav-top .nav-menu .nav-item.active .nav-link {
+        color: #2ecc71; }
+      #nav-top .nav-menu .nav-item .nav-link {
+        text-transform: uppercase;
+        padding: 0.75rem 0.5rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: #fff; }
+        #nav-top .nav-menu .nav-item .nav-link:hover, #nav-top .nav-menu .nav-item .nav-link:active {
+          color: #2ecc71; }
+
+.current {
+  color: #2ecc71; }
+
+/*
+* 
+* home.scss
+* Styling for the home page
+*
+*/
+#home .logo {
+  background: white;
+  height: 100px;
+  width: 200px; }
+
+#about {
+  padding-top: 5rem;
+  background-image: url("img/bg-about.png"); }
+
+#portfolio {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  #portfolio img {
+    width: 100%;
+    border: 3px solid #fff; }
+    #portfolio img:hover {
+      opacity: 0.5;
+      border-color: #2ecc71;
+      transition: all 0.5s ease-out; }
+  #portfolio .btn-dark,
+  #portfolio .btn-light {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem; }
+  #portfolio .btn:hover,
+  #portfolio .btn-dark:hover,
+  #portfolio .btn-light:hover {
+    background: #2ecc71;
+    color: #000; }
+  #portfolio .btn-dark {
+    background: #222222;
+    color: #fff; }
+  #portfolio .btn-light {
+    background: #333333;
+    color: #fff; }
+
+#contact {
+  margin: 0;
+  padding: 0; }
+  #contact .upperRow {
+    height: 250px;
+    background: #555555; }
+  #contact .lowerRow {
+    padding: 1rem 1rem;
+    height: auto;
+    background: #333333;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-areas: "lg sm nm";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center; }
+    #contact .lowerRow .logo {
+      grid-area: lg;
+      text-align: center;
+      font-size: 1.5rem; }
+    #contact .lowerRow .social {
+      grid-area: sm;
+      text-align: center;
+      font-size: 1.2rem; }
+      #contact .lowerRow .social a {
+        padding: 0.25rem;
+        text-decoration: none;
+        color: #fff; }
+        #contact .lowerRow .social a:hover, #contact .lowerRow .social a:active {
+          text-decoration: none;
+          color: #2ecc71; }
+    #contact .lowerRow .address {
+      grid-area: nm;
+      color: #fff;
+      font-size: 0.75rem;
+      text-align: center; }
+      #contact .lowerRow .address span {
+        color: #2ecc71; }
+
+/*
+* 
+* mobile.scss
+* All Mobile Styling for the complete Website
+*
+*/
+@media screen and (max-width: 768px) {
+  #nav-top {
+    display: none; }
+  #nav-mobile {
+    display: block; }
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr); }
+  #contact .lowerRow {
+    grid-template-areas: "lg" "sm" "nm";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  #portfolio {
+    grid-template-columns: 1fr; } }

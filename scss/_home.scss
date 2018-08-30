@@ -1,0 +1,185 @@
+/*
+* 
+* home.scss
+* Styling for the home page
+*
+*/
+#home {
+  .logo {
+    background: $white;
+    height: 100px;
+    width: 200px;
+  }
+}
+
+#about {
+  padding-top: 5rem;
+  background-image: url('img/bg-about.png');
+}
+
+#portfolio {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $tetiary-color;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  .btn-dark,
+  .btn-light {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+  }
+
+  .btn:hover,
+  .btn-dark:hover,
+  .btn-light:hover {
+    background: $tetiary-color;
+    color: #000;
+  }
+
+  .btn-dark {
+    background: $btn-dark;
+    color: #fff;
+  }
+
+  .btn-light {
+    background: $btn-light;
+    color: #fff;
+  }
+}
+
+#contact {
+  //smallest height for contact is 350px otherwise the Mallagan doesn't work
+  //height: 350px;
+  margin: 0;
+  padding: 0;
+
+  .upperRow {
+    height: 250px;
+    background: $gray;
+  }
+
+  .lowerRow {
+    padding: 1rem 1rem;
+    height: auto;
+    background: $footer-color;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-areas: "lg sm nm";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      grid-area: lg;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .social {
+      grid-area: sm;
+      text-align: center;
+      font-size: 1.2rem;
+
+      a {
+        padding: 0.25rem;
+        text-decoration: none;
+        color: set-text-color($primary-color);
+
+        &:hover,
+        &:active {
+          text-decoration: none;
+          color: $tetiary-color;
+        }
+      }
+    }
+
+    .address {
+      grid-area: nm;
+      color: set-text-color($primary-color);
+      font-size: 0.75rem;
+      text-align: center;
+
+      span {
+        color: $tetiary-color;
+      }
+    }
+  }
+}
+
+// .social {
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//     font-size: 1.2rem;
+//     padding: 0 10px;
+//     &:first-child {
+//       padding: 0 10px 0 0;
+//     }
+//   }
+// }
+// .content-area {
+//   margin-left: 35%;
+//   width: 65%;
+//   background: white;
+//   height: 100%;
+//   // padding: 0 0 0 25%;
+//   .img-container {
+//     display: inline-block;
+//     width: 30%;
+//     position: relative;
+//     height: 100%;
+//     .user-img {
+//       top: 80px;
+//       position: absolute;
+//       left: -200px;
+//       width: 400px;
+//       height: calc(100% - 112px);
+//       background:
+//         url("../img/me.jpg") no-repeat center center;
+//       -webkit-background-size: cover;
+//       -moz-background-size: cover;
+//       -o-background-size: cover;
+//       background-size: cover;
+//     }
+//   }
+//   .profile-section {
+//     vertical-align: top;
+//     display: inline-block;
+//     padding: 20% 0 0;
+//     max-width: 555px;
+//     .profile {
+//       h1 {
+//         font-size: 2.3rem;
+//         font-weight: 500;
+//         line-height: 1.2;
+//         margin: 0 0 30px;
+//         span {
+//           color: $gray;
+//         }
+//       }
+//       h5 {
+//         font-size: 1.3rem;
+//         margin: 0 0 1rem;
+//       }
+//       p {
+//         font-weight: 300;
+//         line-height: 1.4;
+//         margin: 0 0 2rem;
+//       }
+//     }
+//   }
+// }
+// }
