@@ -109,14 +109,16 @@ table {
 
 html,
 body {
-  font-size: 18px;
-  background: #555555;
   font-family: 'Poppins', sans-serif;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.5em;
+  background: #555555;
   height: 100%; }
 
 main {
   margin-top: 6rem;
   padding: 0 2rem;
+  min-height: calc(100vh - 60px);
   overflow: hidden; }
   main section {
     margin: 2rem 0; }
@@ -124,7 +126,7 @@ main {
 footer {
   margin-top: 1rem;
   padding: 0 1rem;
-  height: 10vh;
+  height: auto;
   background: #333333;
   display: grid;
   grid-gap: 2em;
@@ -140,7 +142,8 @@ footer {
     color: #2ecc71; }
   footer .social {
     grid-area: sm;
-    text-align: center; }
+    text-align: center;
+    font-size: 1.2rem; }
     footer .social a {
       padding: 0.25rem;
       text-decoration: none;
@@ -225,7 +228,6 @@ footer {
         #nav-mobile #mnav .mnav-menu .mnav-item .mnav-link {
           display: inline-block;
           position: relative;
-          font-size: 30px;
           text-transform: uppercase;
           padding: 1rem 0;
           font-weight: 300;
@@ -237,20 +239,20 @@ footer {
 
 #nav-top {
   position: fixed;
-  padding-top: 1rem;
+  padding: 1rem;
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: auto;
   opacity: 0.9;
   background: #494949;
   display: grid;
   grid-gap: 2em;
-  grid-template-areas: "nh nm nm nm";
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-areas: "nh nh nm nm nm";
+  grid-template-columns: repeat(5, 1fr); }
   #nav-top .nav-heading {
     grid-area: nh;
     padding: 0;
-    margin: 0 25px;
+    margin: 0px;
     width: 20%; }
     #nav-top .nav-heading h1 {
       font-weight: 700;
@@ -258,22 +260,18 @@ footer {
       color: #2ecc71; }
   #nav-top .nav-menu {
     grid-area: nm;
+    display: flex;
     padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 80%; }
+    margin: 0 25px;
+    width: 80%;
+    list-style: none; }
     #nav-top .nav-menu .nav-item {
-      padding: 0;
-      margin: 0;
-      display: flex;
       float: right;
-      width: 50%; }
+      padding: 0;
+      margin: 0; }
       #nav-top .nav-menu .nav-item.current > a {
         color: #2ecc71; }
       #nav-top .nav-menu .nav-item .nav-link {
-        display: inline-block;
-        position: relative;
-        font-size: 30px;
         text-transform: uppercase;
         padding: 0.75rem 0.5rem;
         font-weight: 300;
@@ -309,6 +307,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
+  #portfolio:focus #nportfolio {
+    background-color: #2ecc71; }
   #portfolio img {
     width: 100%;
     border: 3px solid #fff; }

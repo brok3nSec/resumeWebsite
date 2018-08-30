@@ -91,7 +91,6 @@
         .mnav-link {
           display: inline-block;
           position: relative;
-          font-size: 30px;
           text-transform: uppercase;
           padding: 1rem 0;
           font-weight: 300;
@@ -109,23 +108,22 @@
 }
 
 #nav-top {
-  // display: none;
   position: fixed;
-  padding-top: 1rem;
+  padding: 1rem;
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: auto;
   opacity: 0.9;
   background: darken($primary-color, 5);
   display: grid;
   grid-gap: 2em;
-  grid-template-areas: "nh nm nm nm";
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "nh nh nm nm nm";
+  grid-template-columns: repeat(5, 1fr);
 
   .nav-heading {
     grid-area: nh;
     padding: 0;
-    margin: 0 25px;
+    margin: 0px;
     width: 20%;
 
     h1 {
@@ -137,26 +135,22 @@
 
   .nav-menu {
     grid-area: nm;
+    display: flex;
     padding: 0;
-    margin: 0;
-    list-style: none;
+    margin: 0 25px;
     width: 80%;
+    list-style: none;
 
     .nav-item {
+      float: right;
       padding: 0;
       margin: 0;
-      display: flex;
-      float: right;
-      width: 50%;
 
       &.current>a {
         color: $tetiary-color;
       }
 
       .nav-link {
-        display: inline-block;
-        position: relative;
-        font-size: 30px;
         text-transform: uppercase;
         padding: 0.75rem 0.5rem;
         font-weight: 300;
