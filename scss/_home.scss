@@ -62,17 +62,16 @@
 
 #contact {
   //smallest height for contact is 350px otherwise the Mallagan doesn't work
-  height: 350px;
+  //height: 350px;
+  margin: 0;
+  padding: 0;
 
   .upperRow {
-    height: 300px;
-    margin-top: 10rem;
-    //padding-top: 10rem;
+    height: 250px;
     background: $gray;
   }
 
   .lowerRow {
-    //margin-top: -3rem;
     padding: 1rem 1rem;
     height: auto;
     background: $footer-color;
@@ -84,12 +83,9 @@
     justify-content: center;
 
     .logo {
-      text-align: center;
       grid-area: lg;
+      text-align: center;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: $tetiary-color;
-      // margin: 1rem;
     }
 
     .social {
@@ -97,7 +93,6 @@
       text-align: center;
       font-size: 1.2rem;
 
-      // margin: 1rem;
       a {
         padding: 0.25rem;
         text-decoration: none;

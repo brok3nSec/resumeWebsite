@@ -93,6 +93,12 @@ table {
 * navigation
 */
 /*
+* Branding
+*/
+/*
+* Dimensions
+*/
+/*
 * 
 * global.scss
 * Global Styling for the complete Website
@@ -101,21 +107,33 @@ table {
 * {
   box-sizing: border-box; }
 
-html,
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: fluid-type(320px, 100vw, 16px, 26px);
   line-height: 1.5em;
   background: #555555;
   height: 100%; }
 
 main {
   margin-top: 6rem;
-  padding: 0 2rem;
-  min-height: calc(100vh - 60px);
+  padding: 0;
+  min-height: calc(100vh - 40px);
   overflow: hidden; }
   main section {
     margin: 0; }
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  background-color: #333333; }
+
+.brandName {
+  color: #2ecc71;
+  font-weight: 700; }
 
 /*
 * 
@@ -211,11 +229,8 @@ main {
     grid-area: nh;
     padding: 0;
     margin: 0px;
-    width: 20%; }
-    #nav-top .nav-heading h1 {
-      font-weight: 700;
-      font-size: 3rem;
-      color: #2ecc71; }
+    width: 20%;
+    font-size: 3rem; }
   #nav-top .nav-menu {
     grid-area: nm;
     display: flex;
@@ -287,10 +302,10 @@ main {
     color: #fff; }
 
 #contact {
-  height: 350px; }
+  margin: 0;
+  padding: 0; }
   #contact .upperRow {
-    height: 300px;
-    margin-top: 10rem;
+    height: 250px;
     background: #555555; }
   #contact .lowerRow {
     padding: 1rem 1rem;
@@ -303,11 +318,9 @@ main {
     align-items: center;
     justify-content: center; }
     #contact .lowerRow .logo {
-      text-align: center;
       grid-area: lg;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2ecc71; }
+      text-align: center;
+      font-size: 1.5rem; }
     #contact .lowerRow .social {
       grid-area: sm;
       text-align: center;
@@ -337,4 +350,13 @@ main {
   #nav-top {
     display: none; }
   #nav-mobile {
-    display: block; } }
+    display: block; }
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr); }
+  #contact .lowerRow {
+    grid-template-areas: "lg" "sm" "nm";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  #portfolio {
+    grid-template-columns: 1fr; } }

@@ -8,10 +8,13 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: fluid-type($min_width, $max_width, $min_font, $max_font);
   line-height: 1.5em;
   background: $gray;
   height: 100%;
@@ -19,15 +22,29 @@ body {
 
 main {
   margin-top: 6rem;
-  padding: 0 2rem;
-  min-height: calc(100vh - 60px);
+  padding: 0;
+  min-height: calc(100vh - 40px);
   overflow: hidden;
 
   section {
     margin: 0;
-    //padding: 5rem;
-    //min-height: 500px;
   }
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+  height: auto;
+  text-align: center;
+  color: set-text-color($primary-color);
+  background-color: $footer-color;
+}
+
+// Branding
+.brandName {
+  color: $brandName-color;
+  font-weight: 700;
 }
 
 // .primary-btn {

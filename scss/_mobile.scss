@@ -19,7 +19,22 @@
   #nav-mobile {
     display: block;
   }
+
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact {
+    .lowerRow {
+      grid-template-areas: "lg""sm""nm";
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 //SmartPhones
-@include mediaSm {}
+@include mediaSm {
+  #portfolio {
+    grid-template-columns: 1fr;
+  }
+}

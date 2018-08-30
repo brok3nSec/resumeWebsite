@@ -62,7 +62,17 @@ $tetiary-color: $emerald;
 * navigation
 */
 $nav-btn-color: $peter_river;
-$nav-heading-color: $tetiary-color;
 $footer-color: $gray-dark;
 $btn-dark: $gray-darker;
 $btn-light:$gray-dark;
+/*
+* Branding
+*/
+$brandName-color: $tetiary-color;
+/*
+* Dimensions
+*/
+$min_width: 320px;
+$max_width: 100vw;
+$min_font: 16px;
+$max_font: 26px;
