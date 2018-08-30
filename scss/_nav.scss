@@ -31,7 +31,7 @@
     position: absolute;
     z-index: 3;
     left: 35px;
-    top: 35px;
+    top: 30px;
     cursor: pointer;
     @include easeOut;
     transform: rotate(180deg);
@@ -58,6 +58,14 @@
         transform: rotate(-45deg) translate(7px, -6px);
       }
     }
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+    top: 32px;
   }
 
   #mnav {

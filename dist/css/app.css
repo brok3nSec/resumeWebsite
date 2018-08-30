@@ -162,7 +162,7 @@ footer {
     position: absolute;
     z-index: 3;
     left: 35px;
-    top: 35px;
+    top: 30px;
     cursor: pointer;
     transition: all 0.5s ease-out;
     transform: rotate(180deg); }
@@ -178,6 +178,12 @@ footer {
         opacity: 0; }
       #nav-mobile .menu-btn-close .btn-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px); }
+  #nav-mobile .logo {
+    font-size: 1.8rem;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+    top: 32px; }
   #nav-mobile #mnav {
     position: fixed;
     top: 0;
