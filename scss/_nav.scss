@@ -146,24 +146,31 @@
       padding: 0;
       margin: 0;
 
-      &.current>a {
-        color: $tetiary-color;
+      &.active {
+        .nav-link {
+          color: $tetiary-color;
+        }
       }
 
       .nav-link {
         text-transform: uppercase;
         padding: 0.75rem 0.5rem;
         font-weight: 300;
-        color: set-text-color($primary-color);
         text-decoration: none;
-        @include easeOut;
+        color: set-text-color($primary-color);
 
-        &:hover {
+        //@include easeOut;
+        &:hover,
+        &:active {
           color: $tetiary-color;
         }
       }
     }
   }
+}
+
+.current {
+  color: $tetiary-color;
 }
 
 // #menu {

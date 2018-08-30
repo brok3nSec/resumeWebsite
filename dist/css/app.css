@@ -69,12 +69,6 @@ table {
 *
 */
 /*
-* EaseOut Transition
-*/
-/*
-* Set Text Color
-*/
-/*
 * 
 * config.scss
 * All design properties for the complete Website
@@ -121,43 +115,7 @@ main {
   min-height: calc(100vh - 60px);
   overflow: hidden; }
   main section {
-    margin: 2rem 0; }
-
-footer {
-  margin-top: 1rem;
-  padding: 0 1rem;
-  height: auto;
-  background: #333333;
-  display: grid;
-  grid-gap: 2em;
-  grid-template-areas: "lg sm nm";
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: center; }
-  footer .logo {
-    text-align: center;
-    grid-area: lg;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2ecc71; }
-  footer .social {
-    grid-area: sm;
-    text-align: center;
-    font-size: 1.2rem; }
-    footer .social a {
-      padding: 0.25rem;
-      text-decoration: none;
-      color: #fff; }
-      footer .social a:hover {
-        text-decoration: none;
-        color: #2ecc71; }
-  footer .address {
-    grid-area: nm;
-    color: #fff;
-    font-size: 0.75rem;
-    text-align: center; }
-    footer .address span {
-      color: #2ecc71; }
+    margin: 0; }
 
 /*
 * 
@@ -269,17 +227,19 @@ footer {
       float: right;
       padding: 0;
       margin: 0; }
-      #nav-top .nav-menu .nav-item.current > a {
+      #nav-top .nav-menu .nav-item.active .nav-link {
         color: #2ecc71; }
       #nav-top .nav-menu .nav-item .nav-link {
         text-transform: uppercase;
         padding: 0.75rem 0.5rem;
         font-weight: 300;
-        color: #fff;
         text-decoration: none;
-        transition: all 0.5s ease-out; }
-        #nav-top .nav-menu .nav-item .nav-link:hover {
+        color: #fff; }
+        #nav-top .nav-menu .nav-item .nav-link:hover, #nav-top .nav-menu .nav-item .nav-link:active {
           color: #2ecc71; }
+
+.current {
+  color: #2ecc71; }
 
 /*
 * 
@@ -292,23 +252,15 @@ footer {
   height: 100px;
   width: 200px; }
 
-#home #about {
+#about {
+  padding-top: 5rem;
   background-image: url("img/bg-about.png"); }
 
-#home .social a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0 10px; }
-  #home .social a:first-child {
-    padding: 0 10px 0 0; }
-
 #portfolio {
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  #portfolio:focus #nportfolio {
-    background-color: #2ecc71; }
   #portfolio img {
     width: 100%;
     border: 3px solid #fff; }
@@ -333,6 +285,47 @@ footer {
   #portfolio .btn-light {
     background: #333333;
     color: #fff; }
+
+#contact {
+  height: 350px; }
+  #contact .upperRow {
+    height: 300px;
+    margin-top: 10rem;
+    background: #555555; }
+  #contact .lowerRow {
+    padding: 1rem 1rem;
+    height: auto;
+    background: #333333;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-areas: "lg sm nm";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center; }
+    #contact .lowerRow .logo {
+      text-align: center;
+      grid-area: lg;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2ecc71; }
+    #contact .lowerRow .social {
+      grid-area: sm;
+      text-align: center;
+      font-size: 1.2rem; }
+      #contact .lowerRow .social a {
+        padding: 0.25rem;
+        text-decoration: none;
+        color: #fff; }
+        #contact .lowerRow .social a:hover, #contact .lowerRow .social a:active {
+          text-decoration: none;
+          color: #2ecc71; }
+    #contact .lowerRow .address {
+      grid-area: nm;
+      color: #fff;
+      font-size: 0.75rem;
+      text-align: center; }
+      #contact .lowerRow .address span {
+        color: #2ecc71; }
 
 /*
 * 

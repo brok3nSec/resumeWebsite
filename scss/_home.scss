@@ -10,32 +10,15 @@
     height: 100px;
     width: 200px;
   }
+}
 
-  #about {
-    background-image: url('img/bg-about.png');
-  }
-
-  .social {
-    a {
-      color: $white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      padding: 0 10px;
-
-      &:first-child {
-        padding: 0 10px 0 0;
-      }
-    }
-  }
+#about {
+  padding-top: 5rem;
+  background-image: url('img/bg-about.png');
 }
 
 #portfolio {
-  &:focus {
-    #nportfolio {
-      background-color: $tetiary-color;
-    }
-  }
-
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem;
@@ -77,6 +60,81 @@
   }
 }
 
+#contact {
+  //smallest height for contact is 350px otherwise the Mallagan doesn't work
+  height: 350px;
+
+  .upperRow {
+    height: 300px;
+    margin-top: 10rem;
+    //padding-top: 10rem;
+    background: $gray;
+  }
+
+  .lowerRow {
+    //margin-top: -3rem;
+    padding: 1rem 1rem;
+    height: auto;
+    background: $footer-color;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-areas: "lg sm nm";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      text-align: center;
+      grid-area: lg;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $tetiary-color;
+      // margin: 1rem;
+    }
+
+    .social {
+      grid-area: sm;
+      text-align: center;
+      font-size: 1.2rem;
+
+      // margin: 1rem;
+      a {
+        padding: 0.25rem;
+        text-decoration: none;
+        color: set-text-color($primary-color);
+
+        &:hover,
+        &:active {
+          text-decoration: none;
+          color: $tetiary-color;
+        }
+      }
+    }
+
+    .address {
+      grid-area: nm;
+      color: set-text-color($primary-color);
+      font-size: 0.75rem;
+      text-align: center;
+
+      span {
+        color: $tetiary-color;
+      }
+    }
+  }
+}
+
+// .social {
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//     font-size: 1.2rem;
+//     padding: 0 10px;
+//     &:first-child {
+//       padding: 0 10px 0 0;
+//     }
+//   }
+// }
 // .content-area {
 //   margin-left: 35%;
 //   width: 65%;
